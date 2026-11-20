@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 17px;
+    color: #8866a2;
+}
+
+#books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-card {
+    background: #e9e7d9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.book-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #3f3346;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.book-info ul {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.page-btn.active {
+    background: #4b6cb7;
+    color: #fff;
+    border-color: #4b6cb7;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top-color: #4b6cb7;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 50px auto;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #d9534f;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
